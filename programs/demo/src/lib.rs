@@ -18,7 +18,7 @@ pub mod demo {
 
     pub fn ping(ctx: Context<Ping>, params: PingParams) -> Result<()> {
         // let func = ctx.accounts.function.load()?;
-        // msg!("{:#?}", params);
+        msg!("{:#?}", params);
         Ok(())
     }
 }
@@ -32,7 +32,9 @@ pub struct Ping<'info> {
     pub quote: AccountInfo<'info>,
     pub signer: Signer<'info>,
 }
-#[derive(Clone, AnchorSerialize, AnchorDeserialize, Debug)]
+#[derive(Clone, AnchorSerialize, AnchorDeserialize, Debug, Default)]
 pub struct PingParams {
-    pub value: BorshDecimal,
+    pub prices: Vec<BorshDecimal>,
+    pub volumes: Vec<BorshDecimal>,
+    pub twaps: Vec<BorshDecimal>,
 }

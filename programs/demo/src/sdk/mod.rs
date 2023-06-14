@@ -2,7 +2,7 @@ use anchor_lang::prelude::*;
 use solana_program::pubkey;
 use bytemuck;
 
-const SB_ATTEST_PID: Pubkey = pubkey!("2No5FVKPAAYqytpkEoq93tVh33fo4p6DgAnm4S6oZHo7");
+const SB_ATTEST_PID: Pubkey = pubkey!("SBAPyGPyvYEXTiTEfVrktmpvm3Bae3VoZmjYZ6694Ha");
 
 #[account(zero_copy(unsafe))]
 #[repr(packed)]
